@@ -12,11 +12,11 @@ This repo contains .NET Console Application that demonstrates simple implementat
 1. Clone the repository to your local machine.
 2. Open the solution in preferred text editor or IDE.
 3. Build the solution to restore dependencies.
-```
+```bash
     dotnet restore && dotnet build
 ```
 4. Run the application to see the RSA encryption and decryption in action.
-```
+```bash
     dotnet run
 ```
 
