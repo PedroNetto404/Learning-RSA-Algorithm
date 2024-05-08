@@ -23,6 +23,8 @@ public static class LogUtil
         {
             P = rsa.P.ToString(),
             Q = rsa.Q.ToString(),
+            Modulus = rsa.Modulos.ToString(),
+            Phi = rsa.Phi.ToString(),
             rsa.PublicKey,
             rsa.PrivateKey,
             PlainText = plainText,
@@ -33,11 +35,9 @@ public static class LogUtil
 
         var currentPath = Directory.GetCurrentDirectory();
         var logPath = Path.Combine(currentPath, "logs");
+        if (!Directory.Exists(logPath)) Directory.CreateDirectory(logPath);
 
-        if (!Directory.Exists(logPath))
-            Directory.CreateDirectory(logPath);
-
-        var filePath = Path.Combine(logPath, $"{DateTime.Now:dd-MM-yyyy-HH-mm-ss}.json");
+        var filePath = Path.Combine(logPath, $"{DateTime.Now:dd-MM-yyyy HH-mm-ss}.json");
 
         await File.WriteAllTextAsync(
             filePath,

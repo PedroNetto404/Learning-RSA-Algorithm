@@ -30,7 +30,9 @@ while (true)
 
             var processTextLoadingTask = RsaUi.ShowLoadingAsync($"{(encryptOption == "Encrypt" ? "encrypting" : "decrypting")}...", 3000);
 
-            var processedText = encryptOption == "Encrypt" ? rsa.Encrypt(textToProcess) : rsa.Decrypt(textToProcess);
+            var processedText = encryptOption == "Encrypt" 
+                ? rsa.Encrypt(textToProcess) 
+                : rsa.Decrypt(textToProcess);
 
             await processTextLoadingTask;
             RsaUi.ClearConsole();
@@ -51,6 +53,9 @@ while (true)
             {
                 Console.WriteLine("An error occurred while trying to log the operation.");
                 Console.WriteLine(e.Message);
+
+                await Task.Delay(2000);
+                RsaUi.ClearConsole();
             }
 
             if (RsaUi.ContinueWithSameKeys())
