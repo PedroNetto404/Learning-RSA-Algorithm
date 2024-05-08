@@ -41,7 +41,7 @@ public static class RsaUi
         ]))
         .Header("[yellow]Welcome to[/]"));
 
-    public static string GetOption() => AnsiConsole.Prompt(
+    public static string GetEncryptOption() => AnsiConsole.Prompt(
         new SelectionPrompt<string>()
             .Title("Select an option:")
             .PageSize(10)

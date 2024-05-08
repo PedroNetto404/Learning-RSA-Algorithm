@@ -14,7 +14,7 @@ public static class NumberUtils
     /// </summary>
     /// <param name="number"></param>
     /// <param name="k"></param>
-    /// <returns></returns>
+    /// <returns></returns>IsPrime
     public static bool IsPrime(this BigInteger number)
     {
         if (number <= 1) return false;
@@ -68,7 +68,7 @@ public static class NumberUtils
 
     public static BigInteger GetCoprime(this BigInteger phi)
     {
-        BigInteger e;
+        BigInteger e = 0;
 
         do
         {

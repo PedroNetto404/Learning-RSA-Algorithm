@@ -25,7 +25,7 @@ while (true)
         {
             RsaUi.DisplayKeys(rsa);
 
-            var encryptOption = RsaUi.GetOption();
+            var encryptOption = RsaUi.GetEncryptOption();
             var textToProcess = RsaUi.GetText(encryptOption);
 
             var processTextLoadingTask = RsaUi.ShowLoadingAsync($"{(encryptOption == "Encrypt" ? "encrypting" : "decrypting")}...", 3000);
