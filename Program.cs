@@ -45,8 +45,8 @@ while (true)
                         LogUtil.LogOperation(rsa, textToProcess, processedText) :
                         LogUtil.LogOperation(rsa, processedText, textToProcess)
                 );
+                
                 RsaUi.DisplayLogFilePath(logPath);
-
             }
             catch (Exception e)
             {
