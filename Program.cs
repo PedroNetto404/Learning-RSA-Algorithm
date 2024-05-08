@@ -39,13 +39,12 @@ while (true)
 
             try
             {
-
                 var logPath = await (
                     encryptOption == "Encrypt" ?
                         LogUtil.LogOperation(rsa, textToProcess, processedText) :
                         LogUtil.LogOperation(rsa, processedText, textToProcess)
                 );
-                
+
                 RsaUi.DisplayLogFilePath(logPath);
             }
             catch (Exception e)
