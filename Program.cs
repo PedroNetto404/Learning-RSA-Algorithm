@@ -53,7 +53,6 @@ while (true)
                 Console.WriteLine(e.Message);
             }
 
-
             if (RsaUi.ContinueWithSameKeys())
             {
                 RsaUi.ClearConsole();
